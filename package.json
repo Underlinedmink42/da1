@@ -1,0 +1,12 @@
+{
+  "name": "online-password-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A deliberately limited mock login server for a two-letter password demo",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
