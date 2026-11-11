@@ -10,7 +10,11 @@ let locked = false;
 const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
   res.setHeader("Cache-Control", "no-store");
-
+  
+if (req.method === "GET" && req.url === "/") {
+  res.writeHead(200);
+  return res.end("ONLINE - Mock Demo Server Running");
+}
   if (req.method === "GET" && req.url === "/health") {
     res.writeHead(200);
     return res.end("ONLINE");
